@@ -30,7 +30,7 @@ resource "aws_vpc_security_group_ingress_rule" "https" {
 resource "aws_vpc_security_group_ingress_rule" "ssh" {
   security_group_id = aws_security_group.cloud.id
 
-  cidr_ipv4   = "92.239.132.71/32"
+  cidr_ipv4   = "public-ip/32" # Own public ip was used
   from_port   = 22
   to_port     = 22
   ip_protocol = "tcp"
