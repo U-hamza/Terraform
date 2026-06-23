@@ -1,7 +1,7 @@
 resource "aws_instance" "wordpress" {
   ami           = data.aws_ami.amazon_linux.id
   instance_type = var.instance_type
-  subnet_id     = "subnet-06b87fca1146055b9"
+  subnet_id     = "subnet-" # Custom subnet id
 
   associate_public_ip_address = true
 
@@ -18,7 +18,7 @@ resource "aws_instance" "wordpress" {
 }
 
 data "aws_vpc" "existing" {
-  id = "vpc-0f6b4090986bfa7d2"
+  id = "vpc-" #Custom VPC id
 }
 
 data "aws_ami" "amazon_linux" {

@@ -1,7 +1,7 @@
 resource "aws_instance" "cloud" {
   ami                         = data.aws_ami.amazon_linux.id
   instance_type               = var.instance_type
-  subnet_id                   = "subnet-073228a7e078136e0"
+  subnet_id                   = "subnet-" #Custom subnet id
   key_name                    = var.key_name
   associate_public_ip_address = true
   vpc_security_group_ids      = [aws_security_group.cloud.id]
@@ -15,7 +15,7 @@ resource "aws_instance" "cloud" {
 
 
 data "aws_vpc" "existing" {
-  id = "vpc-08d0694016bb47ad6"
+  id = "vpc-" # Custom vpc id
 }
 
 data "aws_ami" "amazon_linux" {
