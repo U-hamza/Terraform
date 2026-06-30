@@ -5,7 +5,7 @@
 *.tfstate
 *.tfstate.*
 
-# Variable files (often contain secrets)
+# Variable files
 *.tfvars
 
 # macOS
