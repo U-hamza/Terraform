@@ -43,6 +43,28 @@ The configurations below were used to set up the data script. Wordpress packages
 
 <img width="638" height="637" alt="Screenshot 2026-07-01 at 18 38 07" src="https://github.com/user-attachments/assets/cefa2372-7059-4068-ba02-bedbca04b7ef" />
 
+<br/>
+
+
+## main.tf 
+The resource code should be in the main.tf 
+
+<img width="325" height="311" alt="Screenshot 2026-07-01 at 18 05 41" src="https://github.com/user-attachments/assets/9df1a7cc-cb9b-46d6-a292-a413a57f5395" />
+
+<br/>
+
+the following was used:
+
+- ami: this was configured using the code in the main.tf file aws_ami
+- <img width="410" height="276" alt="Screenshot 2026-07-01 at 19 06 52" src="https://github.com/user-attachments/assets/18d6c0d1-54ce-4e48-ac5a-326d40ce1c1d" />
+- instance type: the variable for the instace_type was used.
+- subnet id: this was manually entered into the resource block after a subnet was created on the AWS console.
+- Futher inputs were made such as security groups etc after they were created. All code is shown in the repository. 
+
+
+## Security Groups
+
+
 
 
 
