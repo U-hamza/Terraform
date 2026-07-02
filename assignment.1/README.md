@@ -111,6 +111,10 @@ The outputs should be displayed as shown below and wordpress should be running o
 
 
 
+## .gitignore
+
+.gitignore file needs to contain all sensitive information that should not be pushed to github such as terraform.tfvars which contains sensitive information like key pairs for EC2 instances. 
+
 
 ## Challenges
 
