@@ -57,12 +57,62 @@ the following was used:
 
 - ami: this was configured using the code in the main.tf file aws_ami
 - <img width="410" height="276" alt="Screenshot 2026-07-01 at 19 06 52" src="https://github.com/user-attachments/assets/18d6c0d1-54ce-4e48-ac5a-326d40ce1c1d" />
-- instance type: the variable for the instace_type was used.
+- instance type: the variable for the instance_type was used.
 - subnet id: this was manually entered into the resource block after a subnet was created on the AWS console.
 - Futher inputs were made such as security groups etc after they were created. All code is shown in the repository. 
 
+A VPC data block was written to allow the EC2 Instance to connect to the right VPC. The VPC ID was taken from the AWS console and inserted into the id section. 
 
-## Security Groups
+<img width="331" height="95" alt="Screenshot 2026-07-02 at 13 28 16" src="https://github.com/user-attachments/assets/dfb6b4b6-8894-4b41-a8c7-17ff6a7a4826" />
+
+
+## sg.tf (security groups)
+All security group inbound and outbounds were configured in this file. The main structure/template can be found in the HashiCorps website but then needs adjusting based on requirements for the EC2 instance. 
+
+Inbound traffic:
+- HTTP over port 80
+- HTTPS over port 443
+- SSH over port 22 using personal public IP address
+
+Outbound traffic: 
+- All traffic 
+
+
+## Outputs 
+All outputs that need to be displayed should be written here. 
+
+<img width="641" height="390" alt="Screenshot 2026-07-02 at 13 33 48" src="https://github.com/user-attachments/assets/52e0e2d2-1159-4588-8c50-e8247991f1e0" />
+
+
+## Adjustments 
+Ensure all code has bee updated in the main.tf after security groups, vpc's etc. This infrastrucure can now be deployed using Terraform init. 
+
+
+## Terraform Deployment
+- Terraform init - this will initialise Terraform
+- Terraform plan - this will allow you to see what is being deployed or any changes.
+- Terraform apply - this will then apply all changes and run the code to create the instance
+
+
+The outputs should be displayed as shown below and wordpress should be running on the wordpress public id.
+
+<img width="987" height="317" alt="Screenshot 2026-06-19 at 20 52 22" src="https://github.com/user-attachments/assets/6622e8cd-3c79-44cb-880f-08d4fecc7fa9" />
+
+<br/>
+
+
+<img width="1421" height="880" alt="Screenshot 2026-06-19 at 20 52 40" src="https://github.com/user-attachments/assets/7bf28c86-bfc4-423b-b8f0-72719361de91" />
+
+
+<br/>
+
+
+<img width="1429" height="823" alt="Screenshot 2026-06-19 at 20 53 06" src="https://github.com/user-attachments/assets/584bc2f4-cfe7-4307-aef1-6cf05ddc8847" />
+
+
+
+
+
 
 
 
