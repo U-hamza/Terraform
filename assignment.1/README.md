@@ -112,8 +112,13 @@ The outputs should be displayed as shown below and wordpress should be running o
 
 
 
+## Challenges
 
+During this project, I deployed a WordPress environment on AWS using Terraform and encountered several real-world infrastructure challenges. The main issues included launching an EC2 instance without a public IP address using Terraform. I also discovered that my initial user-data script was incompatible with Amazon Linux 2023, which prevented the web server from starting and caused the website to return connection errors.
 
+To resolve these problems, I learned how public subnets, route tables, Internet Gateways, and security groups work together to provide internet access. I also gained practical experience in debugging cloud-init/user-data scripts, understanding the difference between connection timed out and connection refused errors, and verifying services directly on the EC2 instance using SSH.
+
+Overall, the project strengthened my understanding of Infrastructure as Code (IaC), Terraform resource management, AWS networking fundamentals and troubleshooting end-to-end cloud deployments.
 
 
 
